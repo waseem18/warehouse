@@ -230,7 +230,7 @@ def register(request, _form_class=RegistrationForm):
 
     if request.method == "POST" and form.validate():
         user = user_service.create_user(
-            form.username.data, form.full_name.data, form.password.data,
+            form.username.data, form.full_name.data, form.new_password.data,
             form.email.data
         )
 
